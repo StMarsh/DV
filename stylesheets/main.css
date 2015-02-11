@@ -140,10 +140,8 @@ body {
 .wrap {
   color: #0094d9;
   font: 11px Tahoma, Geneva, sans-serif;
-  height: 100%;
-  margin: 0 auto -28px;
-  padding-bottom: 30px;
-  position: relative;
+  min-height: 100%;
+  margin: 0 auto;
   width: 902px;
 }
 
@@ -246,6 +244,7 @@ button {
 .icons-next a {
   display: block;
   height: 15px;
+  text-decoration: none;
   width: 16px;
 }
 
@@ -256,6 +255,7 @@ button {
 .lang a {
   display: block;
   margin-left: 10px;
+  margin-top: 1px;
   text-align: center;
 }
 
@@ -263,6 +263,7 @@ button {
   display: inline-block;
   *zoom: 1;
   *display: inline;
+  font-size: 10px;
   height: 12px;
   margin-left: 7px;
   padding-bottom: 7px;
@@ -307,6 +308,9 @@ button {
   *display: inline;
   margin-left: 4px;
 }
+.icons li:last-child {
+  margin-left: 3px;
+}
 .icons a {
   display: block;
   height: 13px;
@@ -319,7 +323,7 @@ li.site-map {
 
 /**NAVIGATION**/
 nav {
-  margin-top: 26px;
+  margin-top: 27px;
   width: 100%;
 }
 nav li {
@@ -327,10 +331,10 @@ nav li {
   margin-left: 35px;
 }
 nav li:first-child {
-  margin-left: 1px;
+  margin-left: 0;
 }
 
-/*****CONTENT*****/
+/*****CONTENT-WRAP*****/
 .content-wrap,
 footer {
   background: #fff url(../images/line.png) repeat-x;
@@ -346,11 +350,12 @@ aside {
 }
 
 .left {
-  padding-left: 11px;
+  padding-left: 10px;
   width: 181px;
 }
 
 .menu li {
+  margin-top: 1px;
   padding-bottom: 7px;
 }
 
@@ -359,24 +364,23 @@ a {
 }
 
 .right {
-  padding-right: 1px;
   padding-top: 3px;
-  width: 175px;
+  width: 174px;
 }
 
 /**CONTENT**/
 .content {
   margin-top: 16px;
-  width: 539px;
+  width: 540px;
 }
 
 section {
-  margin: 8px 0 13px;
+  margin: 9px 0 13px;
   overflow: hidden;
 }
 section img {
   float: left;
-  margin: 3px 9px 0 1px;
+  margin: 2px 8px 0 1px;
 }
 section h2 {
   font-size: 14px;
@@ -396,8 +400,12 @@ section p:last-child {
 footer {
   height: 28px;
   margin: -28px auto 0;
-  position: relative;
   width: 902px;
+}
+
+.hFooter {
+  clear: both;
+  height: 38px;
 }
 
 /*# sourceMappingURL=main.css.map */
