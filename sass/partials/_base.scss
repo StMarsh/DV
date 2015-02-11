@@ -1,0 +1,53 @@
+//Variables, Mixins, Sprites
+
+@import "compass";
+
+@import "compass/css3"; //load CSS3 module
+
+@import "compass/utilities/sprites"; //load Sprite module
+
+//VARIABLES
+
+//Colors
+$background-color: #fff;
+$main-text-color: #0094d9;
+$passive-text-color: #a9bdd4; //text color for less important text(login label, contacts, date)
+$hover-link-color: #4d8eb5; //hover, active, visited links color
+//Height
+$footer-height: 28px;
+$header-height: 239px;
+$login-height: 85px;
+//Font
+$h2-font-size: 14px;
+$login-font-size: 9px;//font-size for less important text
+$main-font-size: 11px;
+$main-font-family: Tahoma, Geneva, sans-serif;
+//Width
+$lang-li-width: 80px; //width 'li' block in 'lang'
+$lang-main-width: 570px; //width main lang block
+$login-width: 100px;
+$sidebar-width: 175px;
+$wrap-width: 902px;
+//Other
+$top-padding: 28px; //for login and contacts
+
+
+//MIXINS
+
+
+/*****SPRITES*****/
+
+/**ICONS**/
+$icons-spacing: 2px;
+//$icons-layout:smart;
+@import "../images/icons/*.png";
+@include all-icons-sprites;
+$height-prev:icons-sprite-height(prev);
+$width-prev: icons-sprite-width(prev);
+$height-home: icons-sprite-height(home);
+$width-home: icons-sprite-width(home);
+
+/**FLAG**/
+$icons-spacing: 5px;
+@import "../images/lang/*.png";
+@include all-lang-sprites;

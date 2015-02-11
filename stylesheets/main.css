@@ -1,0 +1,403 @@
+/*****RESET*****/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*****SPRITES*****/
+/**ICONS**/
+.icons-sprite, .icons-home, .icons-mail, .icons-next, .icons-prev, .icons-site-map {
+  background-image: url('/images/../images/icons-s45cbab7e98.png');
+  background-repeat: no-repeat;
+}
+
+.icons-home {
+  background-position: 0 0;
+}
+.icons-home:hover, .icons-home.home-hover {
+  background-position: 0 -15px;
+}
+
+.icons-mail {
+  background-position: 0 -30px;
+}
+.icons-mail:hover, .icons-mail.mail-hover {
+  background-position: 0 -44px;
+}
+
+.icons-next {
+  background-position: 0 -58px;
+}
+.icons-next:hover, .icons-next.next-hover {
+  background-position: 0 -75px;
+}
+
+.icons-prev {
+  background-position: 0 -92px;
+}
+.icons-prev:hover, .icons-prev.prev-hover {
+  background-position: 0 -109px;
+}
+
+.icons-site-map {
+  background-position: 0 -126px;
+}
+.icons-site-map:hover, .icons-site-map.site-map-hover {
+  background-position: 0 -141px;
+}
+
+/**FLAG**/
+.lang-sprite, .lang-de, .lang-es, .lang-fr, .lang-gb, .lang-it, .lang-nl {
+  background-image: url('/images/../images/lang-scde48949a0.png');
+  background-repeat: no-repeat;
+}
+
+.lang-de {
+  background-position: 0 0;
+}
+
+.lang-es {
+  background-position: 0 -42px;
+}
+
+.lang-fr {
+  background-position: 0 -84px;
+}
+
+.lang-gb {
+  background-position: 0 -126px;
+}
+
+.lang-it {
+  background-position: 0 -168px;
+}
+
+.lang-nl {
+  background-position: 0 -210px;
+}
+
+/*****GENERAL*****/
+html,
+body {
+  height: 100%;
+}
+
+.wrap {
+  color: #0094d9;
+  font: 11px Tahoma, Geneva, sans-serif;
+  height: 100%;
+  margin: 0 auto -28px;
+  padding-bottom: 30px;
+  position: relative;
+  width: 902px;
+}
+
+aside,
+.content,
+.slider > div,
+.slider > ul {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #4d8eb5;
+}
+
+/*****HEADER*****/
+header {
+  background: url(../images/headerbg.png) no-repeat center;
+  height: 239px;
+  position: relative;
+  width: 100%;
+}
+
+/**LOGIN FORM**/
+.login {
+  color: #a9bdd4;
+  font-size: 9px;
+  height: 85px;
+  left: 0;
+  padding-top: 29px;
+  position: relative;
+  top: 1px;
+  width: 100px;
+}
+.login p {
+  clear: both;
+  height: 12px;
+  letter-spacing: .07em;
+  padding-right: 8px;
+  text-align: right;
+}
+.login p:first-child, .login p:last-child {
+  text-align: left;
+}
+.login input {
+  border: 1px dotted #a9bdd4;
+  font-size: 7px;
+  height: 7px;
+  width: 48px;
+  padding-left: 2px;
+  letter-spacing: .1em;
+}
+.login label {
+  cursor: pointer;
+  float: left;
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  color: #0094d9;
+  cursor: pointer;
+  float: left;
+  font: 11px Tahoma, Geneva, sans-serif;
+  padding: 2px 0 0 0px;
+  text-decoration: underline;
+}
+
+/**CONTACTS**/
+.contact {
+  color: #a9bdd4;
+  font-size: .9em;
+  padding-top: 28px;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+}
+.contact p {
+  margin-top: 1px;
+}
+
+/**SLIDER**/
+.slider {
+  margin-top: 36px;
+}
+
+/**RSS ICON**/
+.rss {
+  height: 13px;
+  margin-right: 128px;
+  position: relative;
+  top: 5px;
+  width: 13px;
+}
+
+.icons-prev a,
+.icons-next a {
+  display: block;
+  height: 15px;
+  width: 16px;
+}
+
+.lang {
+  padding-left: 5px;
+  width: 570px;
+}
+.lang a {
+  display: block;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.lang li {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  height: 12px;
+  margin-left: 7px;
+  padding-bottom: 7px;
+  padding-top: 23px;
+  position: relative;
+  width: 80px;
+}
+.lang li:nth-child(1) {
+  left: 1px;
+  top: -4px;
+}
+.lang li:nth-child(2) {
+  left: 1px;
+  top: -11px;
+}
+.lang li:nth-child(3) {
+  left: 1px;
+  top: -14px;
+}
+.lang li:nth-child(4) {
+  left: 11px;
+  top: -14px;
+}
+.lang li:nth-child(5) {
+  left: 14px;
+  top: -11px;
+}
+.lang li:nth-child(6) {
+  left: 13px;
+  top: -4px;
+}
+
+/**ICONS**/
+.icons {
+  margin-left: 81px;
+  position: relative;
+  top: 5px;
+}
+.icons li {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  margin-left: 4px;
+}
+.icons a {
+  display: block;
+  height: 13px;
+  width: 14px;
+}
+
+li.site-map {
+  margin-left: 3px;
+}
+
+/**NAVIGATION**/
+nav {
+  margin-top: 26px;
+  width: 100%;
+}
+nav li {
+  display: inline;
+  margin-left: 35px;
+}
+nav li:first-child {
+  margin-left: 1px;
+}
+
+/*****CONTENT*****/
+.content-wrap,
+footer {
+  background: #fff url(../images/line.png) repeat-x;
+}
+
+/**SIDEBARS**/
+aside {
+  margin-top: 25px;
+  vertical-align: top;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.left {
+  padding-left: 11px;
+  width: 181px;
+}
+
+.menu li {
+  padding-bottom: 7px;
+}
+
+a {
+  color: #0094d9;
+}
+
+.right {
+  padding-right: 1px;
+  padding-top: 3px;
+  width: 175px;
+}
+
+/**CONTENT**/
+.content {
+  margin-top: 16px;
+  width: 539px;
+}
+
+section {
+  margin: 8px 0 13px;
+  overflow: hidden;
+}
+section img {
+  float: left;
+  margin: 3px 9px 0 1px;
+}
+section h2 {
+  font-size: 14px;
+  height: 15px;
+}
+section .date {
+  color: #a9bdd4;
+  font-size: 10px;
+  height: 11px;
+}
+section p:last-child {
+  font-stretch: ultra-expanded;
+  line-height: 1.3;
+}
+
+/*****FOOTER*****/
+footer {
+  height: 28px;
+  margin: -28px auto 0;
+  position: relative;
+  width: 902px;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,280 @@
+@import "partials/reset"; // Reset file
+
+@import "partials/base"; // Modules and Variables
+
+
+/*****GENERAL*****/
+
+html,
+body {
+  height: 100%;
+}
+
+.wrap {
+  color: $main-text-color;
+  font: $main-font-size $main-font-family;
+  height: 100%;
+  margin: 0 auto #{-$footer-height};
+  padding-bottom: $footer-height + 2px;
+  position: relative;
+  width: $wrap-width;
+}
+
+aside,
+.content,
+.slider > div,
+.slider > ul {
+  @include inline-block(false,false);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: $hover-link-color;
+}
+
+/*****HEADER*****/
+
+
+header {
+  background: url(../images/headerbg.png) no-repeat center;
+  height: $header-height;
+  position: relative;
+  width: 100%;
+}
+
+/**LOGIN FORM**/
+
+.login {
+  color: $passive-text-color;
+  font-size: $login-font-size;
+  height: $login-height;
+  left: 0;
+  padding-top: $top-padding+1;
+  position: relative;
+  top: 1px;
+  width: $login-width;
+  & p {
+    clear: both;
+    height: $login-font-size+3;
+    letter-spacing: .07em;
+    padding-right: 8px;
+    text-align: right;
+    &:first-child,
+    &:last-child {
+      text-align: left;
+    }
+  }
+  & input {
+    border: 1px dotted  $passive-text-color;
+    font-size: $login-font-size - 2px;
+    height: $login-font-size - 2px;
+    width: $login-width - 52px;
+    padding-left: 2px;
+    letter-spacing: .1em;
+  }
+  & label {
+    cursor: pointer;
+    @include float;
+  }
+}
+
+button {
+  background-color: $background-color;
+  border: none;
+  color: $main-text-color;
+  cursor: pointer;
+  @include float;
+  font: $main-font-size $main-font-family;
+  padding: 2px 0 0 0px;
+  text-decoration: underline;
+}
+
+/**CONTACTS**/
+
+.contact {
+  color: $passive-text-color;
+  font-size: .9em;
+  padding-top: $top-padding;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+  & p {
+    margin-top: 1px;
+  }
+}
+
+/**SLIDER**/
+
+.slider {
+  margin-top: 36px;
+}
+
+/**RSS ICON**/
+
+.rss {
+  height: 13px;
+  margin-right: 128px;
+  position: relative;
+  top: 5px;
+  width: 13px;
+}
+
+.icons-prev a,
+.icons-next a {
+  display: block;
+  height: $height-prev;
+  width: $width-prev;
+}
+
+.lang {
+  padding-left: 5px;
+  width: $lang-main-width;
+  & a {
+    display: block;
+    margin-left: 10px;
+    text-align: center;
+  }
+}
+
+.lang li {
+  @include inline-block(false,false);
+  height: 12px;
+  margin-left: 7px;
+  padding-bottom: 7px;
+  padding-top: 23px;
+  position: relative;
+  width: $lang-li-width;
+  &:nth-child(1) {
+    left: 1px;
+    top: -4px;
+  }
+  &:nth-child(2) {
+    left: 1px;
+    top: -11px;
+  }
+  &:nth-child(3) {
+    left: 1px;
+    top: -14px;
+  }
+  &:nth-child(4) {
+    left: 11px;
+    top: -14px;
+  }
+  &:nth-child(5) {
+    left: 14px;
+    top: -11px;
+  }
+  &:nth-child(6) {
+    left: 13px;
+    top: -4px;
+  }
+}
+
+/**ICONS**/
+
+.icons {
+  margin-left: 81px;
+  position: relative;
+  top: 5px;
+  & li {
+    @include inline-block(false,false);
+    margin-left: 4px;
+  }
+  & a {
+    display: block;
+    height: $height-home;
+    width: $width-home;
+  }
+}
+
+li.site-map {
+  margin-left: 3px;
+}
+
+/**NAVIGATION**/
+
+nav {
+  margin-top: 26px;
+  width: 100%;
+  & li {
+    display: inline;
+    margin-left: 35px;
+    &:first-child {
+      margin-left: 1px;
+    }
+  }
+}
+
+
+/*****CONTENT*****/
+
+.content-wrap,
+footer {
+  background: $background-color url(../images/line.png) repeat-x;
+}
+
+/**SIDEBARS**/
+
+aside {
+  margin-top: $footer-height - 3px;
+  vertical-align: top;
+  @include box-sizing(border-box);
+}
+
+.left {
+  padding-left: 11px;
+  width: $sidebar-width + 6px;
+}
+
+.menu li {
+  padding-bottom: 7px;
+}
+
+a {
+  color: $main-text-color;
+}
+
+.right {
+  padding-right: 1px;
+  padding-top: 3px;
+  width: $sidebar-width;
+}
+
+/**CONTENT**/
+
+.content {
+  margin-top: 16px;
+  width: $wrap-width - (2*$sidebar-width + 13px);
+}
+
+section {
+  margin: 8px 0 13px;
+  overflow: hidden;
+  & img {
+    @include float;
+    margin: 3px 9px 0 1px;
+  }
+  & h2 {
+    font-size: $h2-font-size;
+    height: $h2-font-size + 1px;
+  }
+  & .date {
+    color: $passive-text-color;
+    font-size: $main-font-size - 1px;
+    height: $main-font-size;
+  }
+  & p:last-child {
+    font-stretch: ultra-expanded;
+    line-height: 1.3;
+  }
+}
+
+/*****FOOTER*****/
+
+footer {
+  height: $footer-height;
+  margin: -$footer-height auto 0;
+  position: relative;
+  width: $wrap-width;
+}
