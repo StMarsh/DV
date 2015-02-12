@@ -2,7 +2,7 @@
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
+del, dfn, em, img, .rss, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
@@ -47,7 +47,7 @@ q:before, q:after, blockquote:before, blockquote:after {
   content: none;
 }
 
-a img {
+a img, a .rss {
   border: none;
 }
 
@@ -236,12 +236,15 @@ button {
 }
 
 /**RSS ICON**/
-.rss {
+img, .rss {
   height: 13px;
+  width: 13px;
+}
+
+.rss {
   margin-right: 128px;
   position: relative;
   top: 5px;
-  width: 13px;
 }
 
 .icons-prev a,
@@ -364,7 +367,7 @@ aside {
   vertical-align: top;
 }
 
-.left {
+.left-sidebar {
   padding-left: 10px;
   width: 164px;
 }
@@ -378,8 +381,12 @@ a {
   color: #0094d9;
 }
 
-.right {
+.right-sidebar {
   padding-top: 3px;
+  width: 174px;
+}
+.right-sidebar img, .right-sidebar .rss {
+  height: 232px;
   width: 174px;
 }
 
@@ -397,9 +404,11 @@ section {
   overflow: hidden;
   padding: 0 10px;
 }
-section img {
+section img, section .rss {
   float: left;
+  height: 61px;
   margin: 2px 8px 0 1px;
+  width: 61px;
 }
 section h2 {
   font-size: 14px;

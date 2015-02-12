@@ -115,12 +115,16 @@ button {
 
 /**RSS ICON**/
 
-.rss {
+img {
   height: 13px;
+  width: 13px;
+}
+
+.rss {
+  @extend img;
   margin-right: 128px;
   position: relative;
   top: 5px;
-  width: 13px;
 }
 
 .icons-prev a,
@@ -245,7 +249,7 @@ aside {
   vertical-align: top;
 }
 
-.left {
+.left-sidebar {
   padding-left: 10px;
   width: $sidebar-width - 10px;
 }
@@ -259,9 +263,13 @@ a {
   color: $main-text-color;
 }
 
-.right {
+.right-sidebar {
   padding-top: 3px;
   width: $sidebar-width;
+  & img {
+    height: 232px;
+    width: $sidebar-width;
+  }
 }
 
 /**CONTENT**/
@@ -278,7 +286,9 @@ section {
   padding: 0 10px;
   & img {
     @include float;
+    height: 61px;
     margin: 2px 8px 0 1px;
+    width: 61px;
   }
   & h2 {
     font-size: $h2-font-size;
