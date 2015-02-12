@@ -60,6 +60,7 @@ header {
     &:first-child,
     &:last-child {
       text-align: left;
+      //padding: 0;
     }
   }
   & input {
@@ -74,6 +75,10 @@ header {
     cursor: pointer;
     @include float;
   }
+}
+//letterspasing for mozilla
+.login p, x:-moz-any-link {
+  letter-spacing: normal;
 }
 
 button {
@@ -91,7 +96,7 @@ button {
 
 .contact {
   color: $passive-text-color;
-  font-size: .9em;
+  font-size: $main-font-size - 1px;
   padding-top: $top-padding;
   position: absolute;
   right: 0;
@@ -175,7 +180,7 @@ button {
 /**ICONS**/
 
 .icons {
-  margin-left: 81px;
+  margin-left: 77px;
   position: relative;
   top: 5px;
   & li {
@@ -200,18 +205,33 @@ li.site-map {
 
 nav {
   margin-top: 27px;
+  text-align: justify;
   width: 100%;
-  & li {
+  & a {
+    display: inline-block;
+  }
+  & ul,
+  & li{
     display: inline;
-    margin-left: 35px;
-    &:first-child {
-      margin-left: 0;
-    }
+  }
+  & span {
+    display: inline-block;
+    font-size: 0;
+    height: 0;
+    width: 100%;
   }
 }
 
 
 /*****CONTENT-WRAP*****/
+
+.content-wrap {
+  font-size: 0;
+}
+
+aside, .content {
+  font-size: $main-font-size;
+}
 
 .content-wrap,
 footer {
@@ -223,12 +243,11 @@ footer {
 aside {
   margin-top: $footer-height - 3px;
   vertical-align: top;
-  @include box-sizing(border-box);
 }
 
 .left {
   padding-left: 10px;
-  width: $sidebar-width + 6px;
+  width: $sidebar-width - 10px;
 }
 
 .menu li {
@@ -242,19 +261,21 @@ a {
 
 .right {
   padding-top: 3px;
-  width: $sidebar-width - 1px;
+  width: $sidebar-width;
 }
 
 /**CONTENT**/
 
 .content {
   margin-top: 16px;
-  width: $wrap-width - (2*$sidebar-width + 12px);
+  width: $wrap-width - 2*$sidebar-width;
 }
 
 section {
+  @include box-sizing(border-box);
   margin: 9px 0 13px;
   overflow: hidden;
+  padding: 0 10px;
   & img {
     @include float;
     margin: 2px 8px 0 1px;

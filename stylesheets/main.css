@@ -201,6 +201,10 @@ header {
   float: left;
 }
 
+.login p, x:-moz-any-link {
+  letter-spacing: normal;
+}
+
 button {
   background-color: #fff;
   border: none;
@@ -215,7 +219,7 @@ button {
 /**CONTACTS**/
 .contact {
   color: #a9bdd4;
-  font-size: .9em;
+  font-size: 10px;
   padding-top: 28px;
   position: absolute;
   right: 0;
@@ -298,7 +302,7 @@ button {
 
 /**ICONS**/
 .icons {
-  margin-left: 81px;
+  margin-left: 77px;
   position: relative;
   top: 5px;
 }
@@ -324,17 +328,31 @@ li.site-map {
 /**NAVIGATION**/
 nav {
   margin-top: 27px;
+  text-align: justify;
   width: 100%;
 }
-nav li {
-  display: inline;
-  margin-left: 35px;
+nav a {
+  display: inline-block;
 }
-nav li:first-child {
-  margin-left: 0;
+nav ul, nav li {
+  display: inline;
+}
+nav span {
+  display: inline-block;
+  font-size: 0;
+  height: 0;
+  width: 100%;
 }
 
 /*****CONTENT-WRAP*****/
+.content-wrap {
+  font-size: 0;
+}
+
+aside, .content {
+  font-size: 11px;
+}
+
 .content-wrap,
 footer {
   background: #fff url(../images/line.png) repeat-x;
@@ -344,14 +362,11 @@ footer {
 aside {
   margin-top: 25px;
   vertical-align: top;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 .left {
   padding-left: 10px;
-  width: 181px;
+  width: 164px;
 }
 
 .menu li {
@@ -371,12 +386,16 @@ a {
 /**CONTENT**/
 .content {
   margin-top: 16px;
-  width: 540px;
+  width: 554px;
 }
 
 section {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   margin: 9px 0 13px;
   overflow: hidden;
+  padding: 0 10px;
 }
 section img {
   float: left;
